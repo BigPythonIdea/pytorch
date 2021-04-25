@@ -4,6 +4,30 @@
 # 回歸
 
 
+
+### 魔改一下 乳癌分析 使用pytorch 在cancer.py，代碼在下面差不多
+#### 須注意 在向前傳遞是double還是float還有Lone問題
+
+
+
+```
+x.to(torch.float64)
+y.to(torch.float64)
+```
+```
+out = net(x.float())             # input x and predict based on x
+loss = loss_func(out, y.long())     # must be (1. nn output, 2. target), the target label is NOT one-hotted
+```
+
+
+
+> 解決方案 : https://www.extutorial.com/ask/352248
+
+
+
+
+
+
 建立數據
 ---
 ```
