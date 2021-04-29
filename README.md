@@ -38,3 +38,15 @@ prediction = net3(x)
 
 驗證:
 ![](https://i.imgur.com/nc25rYr.png)
+
+
+# 批次訓練
+```
+loader = Data.DataLoader(
+    dataset=torch_dataset,      # torch TensorDataset format
+    batch_size=BATCH_SIZE,      # mini batch size
+    shuffle=True,               # random shuffle for training
+    num_workers=2,              # subprocesses for loading data
+)
+```
+
