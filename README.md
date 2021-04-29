@@ -125,4 +125,5 @@ class Net(torch.nn.Module):
     plt.ylim((0, 0.2))
     plt.show()
 ```
+![image](https://user-images.githubusercontent.com/48311280/116517436-88326e80-a901-11eb-93b9-b75c75ee6865.png)
 
